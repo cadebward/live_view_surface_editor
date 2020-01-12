@@ -54,6 +54,8 @@ defmodule MyAppWeb do
           live_component: 3,
           live_component: 4
         ]
+
+      import Surface
     end
   end
 
