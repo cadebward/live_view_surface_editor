@@ -9,6 +9,9 @@ use Mix.Config
 
 # Configures the endpoint
 config :my_app, MyAppWeb.Endpoint,
+  live_view: [
+    signing_salt: "YlmF52cr6WkCsy+kPwcsIzYgwLdaiv1B"
+  ],
   url: [host: "localhost"],
   secret_key_base: "+MG0QENNM+bUk4qjoXGK8Fgs/HL5FyNLq0NyTPh5Cuu2f+7MvjHal8wqzaZDn2nQ",
   render_errors: [view: MyAppWeb.ErrorView, accepts: ~w(html json)],

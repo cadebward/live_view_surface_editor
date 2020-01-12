@@ -24,6 +24,7 @@ defmodule MyAppWeb do
       import Plug.Conn
       import MyAppWeb.Gettext
       alias MyAppWeb.Router.Helpers, as: Routes
+      import Phoenix.LiveView.Controller
     end
   end
 
@@ -42,6 +43,17 @@ defmodule MyAppWeb do
       import MyAppWeb.ErrorHelpers
       import MyAppWeb.Gettext
       alias MyAppWeb.Router.Helpers, as: Routes
+
+      import Phoenix.LiveView,
+        only: [
+          live_render: 2,
+          live_render: 3,
+          live_link: 1,
+          live_link: 2,
+          live_component: 2,
+          live_component: 3,
+          live_component: 4
+        ]
     end
   end
 
@@ -50,6 +62,7 @@ defmodule MyAppWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import Phoenix.LiveView.Router
     end
   end
 
